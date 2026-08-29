@@ -1,0 +1,76 @@
+{
+  "name": "zotero-plugin-markdown-note",
+  "type": "module",
+  "version": "3.3.1",
+  "description": "Zotero Markdown Note Viewer Plugin",
+  "config": {
+    "addonName": "Markdown Note Viewer",
+    "addonID": "markdownnote@euclpts.com",
+    "addonRef": "markdownnote",
+    "addonInstance": "MarkdownNote",
+    "prefsPrefix": "extensions.zotero.markdownnote"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windingwind/zotero-plugin-markdown-note.git"
+  },
+  "author": "cz-hit",
+  "bugs": {
+    "url": "https://github.com/windingwind/zotero-plugin-markdown-note/issues"
+  },
+  "homepage": "https://github.com/windingwind/zotero-plugin-markdown-note#readme",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "start": "zotero-plugin serve",
+    "build": "zotero-plugin build && tsc --noEmit",
+    "lint:check": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "release": "zotero-plugin release",
+    "test": "zotero-plugin test",
+    "update-deps": "npm update --save"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/lang-markdown": "^6.3.2",
+    "@codemirror/language": "^6.11.0",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.38.0",
+    "cherry-markdown": "^0.11.10",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.17.0",
+    "marked": "^16.2.1",
+    "marked-highlight": "^2.2.4",
+    "mermaid": "^11.15.0",
+    "zotero-plugin-toolkit": "^5.1.0-beta.13"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/katex": "^0.16.8",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.10.0",
+    "@zotero-plugin/eslint-config": "^0.6.7",
+    "chai": "^6.2.1",
+    "eslint": "^9.39.2",
+    "mocha": "^11.7.5",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "zotero-plugin-scaffold": "^0.8.2",
+    "zotero-types": "^4.1.0-beta.4"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": [
+          "*.xhtml"
+        ],
+        "options": {
+          "htmlWhitespaceSensitivity": "css"
+        }
+      }
+    ]
+  }
+}

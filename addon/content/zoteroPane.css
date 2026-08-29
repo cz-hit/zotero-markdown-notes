@@ -1,0 +1,6 @@
+/* 模板示例样式，UIExampleFactory.registerStyleSheet 会把条目面板背景变红，已停用。
+   如需自定义条目面板样式，在此添加。
+.makeItRed {
+  background-color: tomato;
+}
+*/

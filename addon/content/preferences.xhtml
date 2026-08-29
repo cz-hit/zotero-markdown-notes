@@ -1,0 +1,35 @@
+<linkset>
+  <html:link rel="localization" href="__addonRef__-preferences.ftl" />
+</linkset>
+<groupbox
+  onload="Zotero.__addonInstance__.hooks.onPrefsEvent('load', { window })"
+>
+  <label><html:h2 data-l10n-id="pref-title"></html:h2></label>
+
+  <!-- 模板示例控件已移除（enable 复选框 + input 文本框），需要时参考 git 历史恢复 -->
+
+  <label><html:h3 data-l10n-id="pref-markdown-section"></html:h3></label>
+  <checkbox
+    id="zotero-prefpane-__addonRef__-openInZotero"
+    preference="openInZotero"
+    data-l10n-id="pref-open-in-zotero"
+  />
+
+  <label><html:h3 data-l10n-id="pref-link-manager-section"></html:h3></label>
+  <button
+    id="zotero-prefpane-__addonRef__-scan-orphans"
+    data-l10n-id="pref-scan-orphans"
+  />
+
+  <!-- 模板示例：虚拟化表格，暂时注释掉
+  <hbox class="virtualized-table-container" flex="1" height="300px">
+    <html:div id="__addonRef__-table-container" />
+  </hbox>
+  -->
+</groupbox>
+<vbox>
+  <html:label
+    data-l10n-id="pref-help"
+    data-l10n-args='{"time": "__buildTime__","name": "__addonName__","version":"__buildVersion__"}'
+  ></html:label>
+</vbox>
